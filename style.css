@@ -1,33 +1,42 @@
 *{
     box-sizing: border-box;
   }
-  html{
+html{
     background: #eee;
   }
-  body{
+body{
     background: #fff;
     margin: 0 auto;
     max-width: 24em;
   }
   
-  /* 
+/* 
   HEADER 
-  met grote titel 
-  en zoek icoon
-  */
-  body > header{
+  met grote titel en zoek icoon
+*/
+body > header{
     position: relative;
     background: gold;
     margin: 0;
     margin-top: -13rem;
     padding: 1rem;
-    transition: all 1s;  
+    transition: all 1s;  /* transition zodat de header animeert */
   }
-  .show-search{
-      margin-top: 0;
-      
-  }
-  body > header h1{
+  
+/* 
+  MICRO INTERACTIE
+  deze class wordt aangeroepen als op de button wordt geklikt
+*/
+.show-search{
+    margin-top: 0;
+}
+body > header.show-search span {
+    top: -2.6rem;
+    transition: top 0.35s 0.4s cubic-bezier(.66,1.66,.72,1.03);
+}
+
+
+body > header h1{
     margin: 4rem 0 3rem 0;
     font-family: roboto, helvetica, arial, sans-serif;
     font-weight: bold;
@@ -35,8 +44,8 @@
     font-size: 6.3em;
     line-height: 80%;
   }
-  /* zoek button vergrootglas & sluit icoon */
-  body > header > button{
+/* zoek button vergrootglas & sluit icoon */
+body > header > button{
     outline: none;
     position: absolute;
     top: 15rem;
@@ -57,35 +66,24 @@
     cursor:pointer;
     transition: all 0.3s;
   }
-  .close{
+.close{
       background-image: url('https://koopreynders.github.io/frontendvoordesigners/img/close.svg');
     font-size: 0em;
   }
-  body > header > button img{
+body > header > button img{
     width: 3rem;
     margin-bottom: 0.4rem;
   }
-  body > header > button:hover{
+body > header > button:hover{
     transform: scale(1.1);
   }
-  
-  /* 
-  MICRO INTERACTIE
-  deze class wordt aangeroepen als op de button wordt geklikt
-  */
-  body > header.show-search{
-    margin-top: 0;
-  }
-  body > header.show-search span {
-    top: -2.6rem;
-    transition: top 0.35s 0.4s cubic-bezier(.66,1.66,.72,1.03);
-  }
-  /* 
-  ZOEK FORM
-  Staat eerst buiten beeld
-  na klik schuift het naar beneden
-  Dit is de micro interactie
-  */
+
+/* 
+ZOEK FORM
+Staat eerst buiten beeld
+na klik schuift het naar beneden
+Dit is de micro interactie
+*/
   header > form{
     margin: -1rem;
     padding: 4rem 1rem 2rem 1rem;
