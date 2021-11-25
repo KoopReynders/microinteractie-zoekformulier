@@ -7,9 +7,9 @@ Voorbeeld: https://koopreynders.github.io/microinteractie/
 
 ## Stappenplan
 
-0. queryselector om de button en de header te kunnen gebruiken in js
-1. click op de button
-2. met classlist toggle de class "show-search" op de header zetten
+1. queryselector om de button en de header te kunnen gebruiken in js
+2. click op de button
+3. met classlist toggle de class "show-search" op de header zetten
 
 
 ## Breakdown
