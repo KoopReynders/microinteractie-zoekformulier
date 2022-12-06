@@ -12,15 +12,17 @@ https://css-tricks.com/video-screencasts/150-hey-designers-know-one-thing-javasc
 */
 
 //1: queryselector om de button en de header te kunnen gebruiken in js
-var deButton = document.querySelector("header > button")
-var deHeader = document.querySelector("header")
+var zoekbutton = document.querySelector("header > button")
+var zoekveld = document.querySelector("header")
 
 //2: click op de button om een functie uit te voeren
-deButton.addEventListener("click",doiets);
+zoekbutton.addEventListener("click",doiets);
 
 //3: met classlist toggle de class "show-search" op de header zetten
 function doiets(){
-    deHeader.classList.toggle("show-search");
+    zoekveld.classList.toggle("show-search");
+    zoekbutton.classList.toggle('close');
+
 
     // if(deHeader.classList.contains("show-search")){
     //     deHeader.classList.remove("show-search");
